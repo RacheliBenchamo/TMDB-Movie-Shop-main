@@ -1,0 +1,87 @@
+.menu-bar {
+    background-color: #333;
+    overflow: auto;
+    display: grid;
+    justify-content: space-between;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.menu-bar li {
+    margin: 0 10px;
+}
+
+.menu-bar li a {
+    font-size: 20px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: #555;
+}
+
+.menu-bar .active {
+    background-color: #4caf50;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.logo span:first-child {
+    background-color: #01b4e4;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-left: 5px;
+}
+
+.logo span:last-child {
+    background-color: #212121;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.cart-button {
+    position: relative; /* Enable positioning for the cart button */
+}
+
+.cart-button .cart-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cart-count {
+    position: absolute; /* Position the count badge */
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #3195de;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+}

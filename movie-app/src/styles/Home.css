@@ -1,0 +1,228 @@
+body {
+    background-color: #0e0e0e;
+}
+
+.card {
+    perspective: 1000px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* White border */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* White glow */
+}
+
+.front {
+    transform: rotateY(0);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0);
+}
+
+.front,
+.back {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    color: white;
+    font-size: 16px;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.back::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.back::-webkit-scrollbar-track {
+    background: #333; /* Color of the track (the area behind the scrollbar) */
+}
+
+.back::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners of the thumb */
+}
+
+.back::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+}
+
+.back::-webkit-scrollbar-thumb:active {
+    background-color: #333; /* Color of the thumb when clicked */
+}
+
+.shape {
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.shape:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.price {
+    position: absolute;
+    top: 32%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.price .dollar {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.7;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #e74c3c;
+}
+
+.error-icon {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.error {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.add-to-cart-button {
+    z-index: 1;
+    position: absolute;
+    width: 100px;
+    height: 55px;
+    bottom: -30px;
+    display: flex;
+    flex-direction: column; /* Set flex direction to row */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    color: #4acc17;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    border-radius: 5px; /* Updated border radius on hover */
+    animation: rotate 0.5s ease-in-out infinite; /* Add shake animation */
+}
+
+.add-to-cart-button:active {
+    animation: none;
+    background-color: #b2b2b2;
+    color: #ffffff;
+    border-radius: 5px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+}
+
+.add-to-cart-button .text {
+    vertical-align: middle;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.button-text {
+    white-space: nowrap;
+    font-size: 11px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 1px;
+}
+
+.headline {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* White border */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* White glow */
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(9, 77, 87);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+
+.subtitle{
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(9, 77, 87);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .headline {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 30px;
+    }
+    .subtitle{
+        font-size: 18px;
+    }
+}

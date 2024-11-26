@@ -1,0 +1,41 @@
+.main-page-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    background-color: #3195de;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-page-btn:hover {
+    background-color: #6badcc;
+    animation: rotate 0.5s ease-in-out infinite; /* Add shake animation */
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(6deg); }
+    75% { transform: rotate(-6deg); }
+    100% { transform: rotate(0); }
+}
+
+.main-page-btn:active {
+    background-color: #4391ab;
+}
+
+.main-page-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(144, 190, 213, 0.4);
+}
+
+.main-page-btn:before {
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    margin-right: 8px;
+}

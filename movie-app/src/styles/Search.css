@@ -1,0 +1,94 @@
+.list-group {
+    background-color: #f8f9fa;
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.history-button {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.delete-button {
+    color: #dc3545;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.delete-button:hover {
+    color: #c82333;
+}
+
+.clear-button {
+    color: #6c757d;
+    font-size: 14px;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.clear-button:hover {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.clear-button:focus {
+    outline: none;
+}
+
+.fa-times {
+    font-size: 14px;
+}
+
+.search-history-container {
+    position: relative;
+}
+
+.close-button {
+    margin-left: auto;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0;
+}
+
+.list-group-item .btn-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.list-group .btn-link{
+    text-decoration: none;
+    color: #000;
+}
+
+.list-group-item .btn-link:hover {
+    text-decoration: underline;
+}
+
+.list-group-item .close-button {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: #000000;
+}
+
+.list-group-item .close-button:hover {
+    color: #c82333;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
